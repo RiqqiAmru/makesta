@@ -10,7 +10,6 @@
         <div class="card-tools">
           <div class="input-group input-group-sm" style="width: 150px;">
             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
             <div class="input-group-append">
               <button type="submit" class="btn btn-default">
                 <i class="fas fa-search"></i>
@@ -33,13 +32,13 @@
           <tbody>
             <?php $no = 1; ?>
             <?php foreach ($semua as $s) : ?>
-              <tr>
-                <td><?= $no++ ?></td>
-                <td><?= $s['nama'] ?></td>
-                <td><?= $s['tempat_lahir'] ?></td>
-                <td><?= $s['alamat'] ?></td>
-                <td>Update | Hapus</td>
-              </tr>
+            <tr>
+              <td><?= $no++ ?></td>
+              <td><?= $s['nama'] ?></td>
+              <td><?= $s['tempat_lahir'] ?></td>
+              <td><?= $s['alamat'] ?></td>
+              <td>Update | Hapus</td>
+            </tr>
             <?php endforeach; ?>
           </tbody>
         </table>
