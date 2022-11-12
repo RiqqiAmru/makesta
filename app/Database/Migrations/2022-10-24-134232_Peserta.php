@@ -90,7 +90,8 @@ class Peserta extends Migration
             ],
             'foto' => [
                 'type' => 'varchar',
-                'constraint' => 50
+                'constraint' => 50,
+                'default' => 'default.jpg'
             ],
         ]);
         $this->forge->addPrimaryKey('peserta_id');

@@ -9,7 +9,7 @@ class AllSeed extends Seeder
     public function run()
     {
         // tabel peserta
-        $data = [
+        $dataPeserta = [
             'nama' => 'Ikrom Ganteng',
             'nik' => '556065404654',
             'tempat_lahir'  => 'pekalongan',
@@ -21,42 +21,28 @@ class AllSeed extends Seeder
             'no_hp'         => '84565405436',
             'hobby'         => 'mabar',
             'instagram'     => 'ikromGanteng',
-            'facebook'     => 'ikromGanteng',
-            'twitter'     => 'ikromGanteng',
+            'facebook'      => 'ikromGanteng',
+            'twitter'       => 'ikromGanteng',
             'sd'            => 'SDN Wonoyoso',
-            'sltp'           => 'MTS Wonoyoso',
+            'sltp'          => 'MTS Wonoyoso',
             'slta'          => 'SMK Kedungwuni',
             'perguruan_tinggi'  => "STMIK WP",
             'pondok'        => 'Santri Gus Samsudin',
             'motto'         => 'hidup dengan Nuroh',
             'foto' => 'ikrom'
         ];
-        $this->db->table("peserta")->insert($data);
+        $this->db->table("peserta")->insert($dataPeserta);
 
         // tabel materi
-        $data = [
-            [
-                'nama_materi'   => 'Ke-Indonesia-an'
-            ],
-            [
-                'nama_materi'   => 'Ke-NU-an'
-            ],
-            [
-                'nama_materi'   => 'Ke-Aswaja-an'
-            ],
-            [
-                'nama_materi'   => 'Ke-Organisasi-an'
-            ],
-            [
-                'nama_materi'   => 'Kepemimpinan'
-            ],
-            [
-                'nama_materi'   => 'IPNU & IPPNU'
-            ],
-            [
-                'nama_materi'   => 'Tradisi Amaliyah'
-            ],
+        $dataMateri = [
+            ['nama_materi'   => 'Ke-Indonesia-an'],
+            ['nama_materi'   => 'Ke-NU-an'],
+            ['nama_materi'   => 'Ke-Aswaja-an'],
+            ['nama_materi'   => 'Ke-Organisasi-an'],
+            ['nama_materi'   => 'Kepemimpinan'],
+            ['nama_materi'   => 'IPNU & IPPNU'],
+            ['nama_materi'   => 'Tradisi Amaliyah'],
         ];
-        $this->db->table("materi")->insertBatch($data);
+        $this->db->table("materi")->insertBatch($dataMateri);
     }
 }

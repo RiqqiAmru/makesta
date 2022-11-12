@@ -19,7 +19,7 @@ class Materi extends Migration
             ]
         ]);
         $this->forge->addPrimaryKey('materi_id');
-        $this->forge->createTable('materi');
+        $this->forge->createTable('materi', true);
     }
 
     public function down()
