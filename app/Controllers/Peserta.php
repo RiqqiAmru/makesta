@@ -25,9 +25,8 @@ class Peserta extends BaseController
     }
     public function cari()
     {
-
         $data = [
-            'peserta' => $this->peserta->where('nama', $_POST['table_search']),
+            'peserta' => $this->peserta->where('nama', $this->request->getVar('table_search')),
             'title' => 'Peserta'
         ];
         return view('peserta/index', $data);
